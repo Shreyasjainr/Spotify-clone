@@ -1,0 +1,274 @@
+*{
+    padding: 0%;
+    margin: 0px;
+}
+:root{
+    --color: rgb(31, 30, 30);
+    --secolor:rgb(69, 68, 68);
+    --a:0;
+}
+body{
+    background-color: black;
+    color: white;
+}  
+.justify{
+    justify-content: center;
+}
+.align{
+    align-items: center;
+}
+.invert{
+    filter: invert(1);
+}
+.pad10{
+    padding: 10px;
+}
+.left{
+    position: relative;
+    width: 25vw;
+    height: auto;
+}
+.logo{
+    width: 120px;
+}
+.right{
+    width:75vw;
+    height: auto;
+    background-color: var(--color);
+    border-radius:5px ;
+    margin: 5px;
+}
+.red{
+    border: 2px solid red;
+}
+.flex{
+    display: flex;
+}
+.home{
+    margin: 5px;
+    background-color: var(--color);
+    border-radius:5px ;
+    justify-content: space-between
+}
+.hm:hover,.search:hover{
+    text-decoration: underline;
+}
+.home ul li{
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    list-style: none;
+    padding: 3px;
+}
+.imgw img{
+    width: 20px;
+    margin-right:10px ;
+}
+.lib{
+    height: 80vh;
+    background-color: var(--color);
+    border-radius:5px ;
+    margin: 5px;
+}
+.footer{
+    position: absolute;
+    bottom: 5px;
+}
+.footer a{
+    color: aliceblue;
+    font-size: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+.footer a:hover{
+    text-decoration: underline;
+}
+.nav{
+    background-color: var(--secolor);
+    height:50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.login{
+    border-radius: 10px;
+    padding: 5px;
+    margin-left:5px ;
+    cursor: pointer;
+}
+.login:hover{
+    scale: 1.1;
+    text-decoration: underline;
+}
+.sign{
+    border: 0px;
+    background-color: var(--secolor);
+    color: white;
+    cursor: pointer;
+}
+.sign:hover{
+    scale: 1.1;
+    text-decoration: underline;
+}
+.playlist h1{
+    padding: 10px;
+}
+.cardContainer {
+    margin: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 70vh; 
+}
+
+.card {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:var(--secolor);
+    position: relative;
+    transition: all .9s;
+}
+.card:hover{
+    background-color: rgb(105, 103, 103);
+    cursor: pointer;
+    --a:1;
+}
+.play {
+    width: 28px;
+    height: 28px;
+    background-color: #1fdf64;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 133px;
+    right: 17px;
+    opacity: var(--a);
+    transition: all 1s ease-out;
+}
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+.songs{
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 67vh; 
+}
+.songs ul li{
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    list-style:none;
+    border: 2px solid whitesmoke;
+    justify-content: space-between;
+}
+.songs ul li:hover{
+    text-decoration: underline;
+}
+.player{
+    position: fixed;
+    bottom: 10px;
+    min-height: 30px;
+    width: 73vw;
+    background-color: var(--secolor);
+    justify-content:space-between;
+    display: flex;
+    gap: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.player img{
+    cursor: pointer;
+}
+.seek{
+    width: 73vw;
+    height: 4px;
+    position: fixed;
+    bottom: 5px;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.circle{
+    width: 11px;
+    height: 11px;
+    border-radius: 10px;
+    background-color: rgb(12, 191, 12);
+    position: absolute;
+    bottom: -4px;
+    left: 0%;
+    transition: left 0.5s;
+}
+.expand{
+    visibility: hidden;
+    cursor: pointer;
+}
+.close{
+    visibility: hidden;
+    cursor: pointer;
+}
+.volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    gap: 10px;
+}
+input[type="range"]{
+    accent-color: rgb(7, 215, 48);
+}
+
+@media (max-width:1400px){
+    .left{
+        position: absolute;
+        left: -120%;
+        z-index: 1;
+        transition:all 0.5s;
+        width: 333px;
+        background-color: black;
+    }
+    .right{
+        width: 100%;
+    }
+    .player{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 98%;
+    }
+    .seek{
+        width:98%;
+    }
+    .expand{
+        visibility: visible;
+    }
+    .close{
+        visibility: visible;
+        display: block;
+    }
+    .right{
+        margin:0%;
+    }
+    .nav{
+        margin-right: 5px;
+    }
+    .cardContainer{
+        margin: 0%;
+        max-height: 75vh
+    }
+    .footer a{
+        font-size: 8px;
+        margin: 5px;
+    }
+    .card{
+        width: 150px;
+    }
+    .durVol{
+        flex-direction: column;
+    }
+}
